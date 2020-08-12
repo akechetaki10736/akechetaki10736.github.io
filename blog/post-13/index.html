@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>kit&#39;s blog</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hibernate學習筆記">
+  <meta name="author" content="kit">
+  <meta name="generator" content="Hugo 0.67.1" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://kit.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://kit.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://kit.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://kit.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://kit.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://kit.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://kit.github.io/images/favicon.png " type="image/x-icon">
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://kit.github.io"><img class="img-fluid"
+          src="https://kit.github.io/images/code.png" alt="kit&#39;s blog"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/dengyao.ji/"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.instagram.com/frankv1cky/"><i class="ti-instagram"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/akechetaki10736"><i class="ti-github"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/tingi%C4%81u-k%C3%AC/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://kit.github.io"><img class="img-fluid"
+            src="https://kit.github.io/images/code.png" alt="kit&#39;s blog"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://kit.github.io/about">About</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://kit.github.io/search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/java"
+          class="text-primary">Java</a>
+        
+        <h2>Hibernate學習筆記</h2>
+        <div class="mb-3 post-meta">
+          <span>By kit</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>12 August 2020</span>
+          
+        </div>
+        
+        <img src="https://kit.github.io/images/post/hibernate.png" class="img-fluid w-100 mb-4" alt="Hibernate學習筆記">
+        
+        <div class="content mb-5">
+          <h1 id="hibernate">Hibernate</h1>
+<p>本質上是透過Java物件來操作SQL Table，因此在Java程式裡會有一個Entity類別(Pojo、Value Object)來對應一個SQL Table。</p>
+<h2 id="hibernate-annotation">Hibernate Annotation</h2>
+<p>透過在Entity類別裡加入Hibernate註解來告訴Hibernate該屬性對應的SQL Column。
+<strong>Entity類別必須是public。</strong>
+<strong>Entity類別裡一定要有預設建構子或無引數 (Argument)建構子。</strong></p>
+<!-- raw HTML omitted -->
+<p><strong>不可以是final類別，不可以有final方法。</strong>
+<strong>資料成員不可以是public。</strong>
+<strong>沒有finalize方法。</strong></p>
+<p><strong>在使用Hibernate時，應該import JPA套件，這是Hibernate Team的建議。</strong>
+@Entity:宣告該類別為一個Entity類別。
+@Table：可帶入value屬性，告訴Hibernate其對應的table名稱。
+@Id：告訴Hibernate該屬性對應Table的PK。
+@Column：可帶入name屬性，告訴Hibernate其對應的column名稱。
+@GeneratedValue:可帶入strategy屬性，告訴Hibernate該如何產生值。</p>
+<table>
+<thead>
+<tr>
+<th>strategy屬性的可選值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GenerationType.AUTO</td>
+<td>讓Hibernate自動針對資料庫挑選合適的策略</td>
+</tr>
+<tr>
+<td>GenerationType.IDENTITY</td>
+<td>指派PK使用資料庫的identity column</td>
+</tr>
+<tr>
+<td>GenerationType.SEQUENCE</td>
+<td>指派PK使用資料庫的序列</td>
+</tr>
+<tr>
+<td>GenerationType.TABLE</td>
+<td>指派PK使用底層資料庫TABLE來確保其獨特性</td>
+</tr>
+</tbody>
+</table>
+<p><strong>你可以實作自己的Gentation Strategy</strong>
+透過實作org.hibernate.id.IdentifierGenerator，Override generate(&hellip;)。</p>
+<p>SessionFactory: 讀取Hibernate的設定檔(Config)、製造Session物件，由於本身是一個重量級(Heavy-Weight)物件，因此整個應用程式應該只能有一個。</p>
+<p>Session：用來包裹JDBC對於資料庫的連線，主要是用來儲存、載入物件的物件，生命週期短，從SessionFactory回收。</p>
+<h2 id="advanced-mapping">Advanced Mapping</h2>
+<h3 id="entity-lifecycle">Entity Lifecycle</h3>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="one-to-one">One to One</h3>
+<p>舉例：講師 &mdash;&gt; 講師詳細資料
+@OneToOne：可帶入cascade屬性，告訴Hibernate如何Cascade。
+@JoinColumn：帶入name屬性，合法值為另一方類別在sql中的fk或pk欄位名稱。如果要實現雙向O2O，在另外一個class也要加上相對應的field、O2O和JoinColumn註解。
+<strong>要新增被關聯表格的field，並將註解加在上方。</strong></p>
+<!-- raw HTML omitted -->
+<p>CascadeType</p>
+<!-- raw HTML omitted -->
+<h3 id="one-to-many">One to Many</h3>
+<p>舉例： 講師 &mdash;&gt; 課程
+在O2M中，要在多方裡新增一方的field，並加註@ManyToOne、@JoinColumn。
+@ManyToOne：可帶入cascade屬性，告訴Hibernate如何Cascade。
+@JoinColumn：帶入name屬性，合法值為另一方類別在sql中的fk或pk欄位名稱。
+在O2M中，要在一方類別裡新增多方的集合(List)field，並加註@OneToMany。
+@OneToMany：帶入mappedBy屬性，屬性合法值請帶入在多方類別中，一方field的名稱。</p>
+<h3 id="fetchtype">FetchType</h3>
+<p>FetchType可以在@ManyToOne、@OneToMany、@OneToOne&hellip;&hellip;等註解中帶入fetch屬性，來指定fetch的方式。</p>
+<h4 id="lazy-loading">Lazy Loading</h4>
+<p>會先載入主要的Entity，有需求時才會載入其他的dependent Entites</p>
+<h4 id="eager-loading">Eager Loading</h4>
+<p>直接載入所有dependent Entites</p>
+<h4 id="default-fetchtype">Default FetchType</h4>
+<!-- raw HTML omitted -->
+<h4 id="解決lazyloading的問題">解決LazyLoading的問題</h4>
+<p>在session關閉前讀取資料</p>
+<p>使用 HQL語法的 JOIN FETCH</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <a href="https://kit.github.io"><img src="https://kit.github.io/images/code.png" alt="kit&#39;s blog"></a>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark" href="tel:0916788799"><i
+                class="ti-mobile mr-3 text-primary"></i>0916788799</a></li>
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Taipei, Taiwan</li>
+          <li class="mb-3"><a class="text-dark" href="mailto:kitingiao@email.com"><i
+                class="ti-email mr-3 text-primary"></i>kitingiao@email.com</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/dengyao.ji/">facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.instagram.com/frankv1cky/">instagram</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://github.com/akechetaki10736">github</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/tingi%C4%81u-k%C3%AC/">linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/java">Java</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://kit.github.io/about">About</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2020 <a href="https://themefisher.com">Themefisher</a> All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://kit.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://kit.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://kit.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://kit.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://kit.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://kit.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://kit.github.io/plugins/search/mark.js"></script>
+
+<script src="https://kit.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://kit.github.io/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'Your ID', 'auto');
+  ga('send', 'pageview');
+</script></body>
+</html>
