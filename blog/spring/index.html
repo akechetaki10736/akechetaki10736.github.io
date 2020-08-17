@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>kit&#39;s blog</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Spring Framework相關隨筆">
+  <meta name="author" content="kit">
+  <meta name="generator" content="Hugo 0.74.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://akechetaki10736.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://akechetaki10736.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://akechetaki10736.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://akechetaki10736.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://akechetaki10736.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://akechetaki10736.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://akechetaki10736.github.io/images/favicon.png " type="image/x-icon">
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom">
+      <a class="navbar-brand mobile-view" href="https://akechetaki10736.github.io"><img class="img-fluid"
+          src="https://akechetaki10736.github.io/images/code.png" alt="kit&#39;s blog"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/dengyao.ji/"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.instagram.com/frankv1cky/"><i class="ti-instagram"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/akechetaki10736"><i class="ti-github"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/tingi%C4%81u-k%C3%AC/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://akechetaki10736.github.io"><img class="img-fluid"
+            src="https://akechetaki10736.github.io/images/code.png" alt="kit&#39;s blog"></a>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://akechetaki10736.github.io"> Home </a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://akechetaki10736.github.io/about">About</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search px-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://akechetaki10736.github.io/search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        
+        <a href="/categories/spring"
+          class="text-primary">Spring</a>
+        
+        <h2>Spring Framework學習筆記</h2>
+        <div class="mb-3 post-meta">
+          <span>By kit</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>15 August 2020</span>
+          
+        </div>
+        
+        <img src="https://akechetaki10736.github.io/images/post/Spring.png" class="img-fluid w-100 mb-4" alt="Spring Framework學習筆記">
+        
+        <div class="content mb-5">
+          <h1 id="spring">Spring</h1>
+<p>Data Access Layer： JDBC &gt; ORM &gt; Transactions &gt; OXM &amp; JMS
+Web Layer： Servelt &gt; WebSocket &gt; Web &gt; Portlet
+Infrascture： AOP &gt; Aspects &gt; Instructmentation &gt; Messaging
+Test Layer： Unit &gt; Integration &gt; Mock</p>
+<p>Inversion of Control (控制反轉)： 一個將物件建構和管理外包的方法，而這個過程將由物件工廠統一管理，讓物件不必主動建立，而是由該工廠替我們進行。
+Spring Bean： 這其實也只是一個Java物件，當Java物件被Spring Container建立後，Spring就會把這些物件稱作Bean。</p>
+<p>&ldquo;In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container. Otherwise, a bean is simply one of many objects in your application. Beans, and the dependencies among them, are reflected in the configuration metadata used by a container.&rdquo;</p>
+<p>Dependency Injection： 將所需的 依賴實例，注入到高階模組中。</p>
+<p>Dependecy Injection： Constructor Injection、 Setter Injection、Field Injection。
+可以將常數外部化：使用.properties檔</p>
+<h2 id="bean">Bean</h2>
+<h3 id="bean-lifecycle">Bean LifeCycle</h3>
+<p><img src="https://i.imgur.com/i8gEzzu.jpg" alt=""></p>
+<p>Bean掃描機制：我們可以在註解後面指定Bean ID ，方便我們在後面BIND物件，若沒有指定Bean ID 則會有預設ID， ClassName 的字首變成小寫就是預設Bean ID。
+<img src="https://i.imgur.com/9Tn2TFU.jpg" alt=""></p>
+<h3 id="autowire">Autowire</h3>
+<p><img src="https://i.imgur.com/sRJjLO7.jpg" alt=""></p>
+<h2 id="spring-rest">Spring REST</h2>
+<h3 id="pathvariable">@PathVariable</h3>
+<p>該註解用於參數
+<img src="https://i.imgur.com/vlwgfLl.jpg" alt=""></p>
+<h2 id="spring-boot">Spring Boot</h2>
+<p>Spring專案的開發往往會在初期遇到許多設定組態的問題，過程十分繁瑣複雜，而Spring Boot就是提供快速開發Spring專案的解決方案。
+Spring Boot 已經將Tomcat寫在底層，因此不用再額外安裝伺服器。
+Spring Boot依舊支援傳統型部署，例如以war檔案的形式部署在伺服器。</p>
+<h2 id="spring-boot-專案結構">Spring Boot 專案結構</h2>
+<h3 id="srcmainjava">src/main/java</h3>
+<h4 id="springbootapplication"><strong>@SpringBootApplication</strong></h4>
+<p>這個註解包含了下列三個註解：</p>
+<ul>
+<li>@EnableAutoConfiguration</li>
+<li>@ComponentScan</li>
+<li>@Configuration
+<img src="https://i.imgur.com/BsMdPGM.jpg" alt="">
+<img src="https://i.imgur.com/uKfhjAv.jpg" alt=""></li>
+</ul>
+<p><img src="https://i.imgur.com/gu9Pndw.jpg" alt=""></p>
+<p>基本上，application.java 一定是放在最外層的套件，方便@ComponentScan直接掃描下一層的所有套件。
+<img src="https://i.imgur.com/7IM4Yto.jpg" alt="">
+如果你有其他結構不同的套件，可以在@SpringBootApplication 裡帶入 scanBasePacakages 屬性，合法值是 String []。
+<img src="https://i.imgur.com/XizRp7u.png" alt=""></p>
+<h3 id="srcmainresources">src/main/resources</h3>
+<p>預設上，Spring Boot 會自動從 <strong>application.properties</strong> 載入外部常數。該檔案會自動建立且不帶任何內容，並存放在 src/main/resources資料夾。
+<img src="https://i.imgur.com/mui01aY.png" alt="">
+如果想在特定field注入特定常數，在該field加上 <strong>@Value</strong>，該屬性可以帶入一個字串值，合法值是<strong>application.properties</strong>裡面value pair 的 key。 
+<strong>表現形式：${key}</strong>
+<img src="https://i.imgur.com/yd89GIn.png" alt=""></p>
+<p>HTML、CSS、JS、Image&hellip;&hellip;等等檔案會放在 src/main/resources/static。</p>
+<p><strong>如果最後的部署檔案是JAR，請不要使用 src/main/webapp 路徑，他只會在部署檔案是WAR時有作用。</strong>
+<img src="https://i.imgur.com/3Qc2prI.png" alt=""></p>
+<h4 id="templates">Templates</h4>
+<p>Spring Boot 對下列 template引擎 有自動的組態設定</p>
+<ul>
+<li>FreeMaker</li>
+<li>Thymeleaf</li>
+<li>Mustache
+Spring Boot 會自動從 src/main/resources/templates 載入templates。</li>
+</ul>
+<h2 id="spring-boot-actuator">Spring Boot Actuator</h2>
+<p>Spring提供的應用程式監控套件，加入這個套件後，會提供額外的REST終端，透過這個終端可以提供應用程式內部設定和狀態等資訊。</p>
+<p><img src="https://i.imgur.com/G3L9rrk.jpg" alt=""></p>
+<h3 id="actuatorinfo">/actuator/info</h3>
+<p>對這個終端發送GET請求，會回傳關於應用程式的INFO資訊，不過該回應預設是空的，使用者必須自行實作。可以在其中加入自己的商業邏輯。
+<img src="https://i.imgur.com/itrrHPn.jpg" alt=""></p>
+<p>Actuator提供的終端一覽
+<a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-endpoints">https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-endpoints</a></p>
+<p><strong>預設來說，只有 /health 和 /info 終端是暴露在外的，如果要修改相關設定，請在 applications.properties 加上下列設定：</strong>
+<!-- raw HTML omitted -->management.endpoints.web.exposure.include=*<!-- raw HTML omitted -->
+黑名單設定：
+<!-- raw HTML omitted -->management.endpoints.web.exposure.exclude=合法值<!-- raw HTML omitted --></p>
+<h2 id="spring-boot-server-configuration">Spring Boot Server Configuration</h2>
+<p>常用的可自定義屬性一覽：
+<a href="https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#common-application-properties">Spring Boot Core Properties</a></p>
+<p><img src="https://i.imgur.com/x1pNKcs.png" alt="">
+Example</p>
+<ul>
+<li>
+<p>Log level config
+<img src="https://i.imgur.com/oy7XTtm.jpg" alt=""></p>
+</li>
+<li>
+<p>Web config
+<img src="https://i.imgur.com/EJCPyRp.jpg" alt=""></p>
+</li>
+</ul>
+<h3 id="spring-boot-jdbc-settings">Spring Boot JDBC Settings</h3>
+<p>以往需要透過XML 或是 Java Code 來設定 JDBC 的組態資訊，在SpringBoot，只需要將 JDBC URL、username、password 設定在application.properties 裡面就好。
+<img src="https://i.imgur.com/Zmw2wWJ.png" alt="">
+<a href="https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#common-application-properties">SpringBoot Common Applications Properties (spring.datasource.*)</a></p>
+<p>根據組態設定，SpringBoot 會自動新建相關的beans (DataSource、EntityManager)。</p>
+<h2 id="java-persistence-api-jpa">Java Persistence API (JPA)</h2>
+<ul>
+<li>ORM的標準API</li>
+<li>需要實作相關介面才能使用
+Hibernate 就是其實作之一。</li>
+</ul>
+<p>JPA帶來的好處就讓用程式不被特定的ORM實作框架綁架，提高靈活性。
+<strong>SringBoot預設的ORM實作是 Hibernate</strong></p>
+<p>EntityManager 是一個跟 Hibernate SessionFactory很相似的物件，他也可以負責包裹 Hibernate Session 物件，我們可以將 EntityManager 物件注入到DAO。</p>
+<h3 id="standard-jpa-api">Standard JPA API</h3>
+<ul>
+<li>JPA API 方法和原生Hibernate API 高度相似</li>
+<li>JPA 也有自己的查詢語言：JPQL (JPA Query Language)。
+<img src="https://i.imgur.com/QoDFWbQ.jpg" alt=""></li>
+</ul>
+<h3 id="spring-data-jpa">Spring Data JPA</h3>
+<p>減少DAO重複程式碼的解決方案。
+Spring Data JPA Interface：JpaRepository
+對於要做成DAO的類別，只需新增<strong><!-- raw HTML omitted -->介面<!-- raw HTML omitted --></strong>並繼承JpaRepository&lt;你的ValueObject類別、Intrger(PK)&gt;即可，Spring會自動生成相關的方法。 (<strong>也不需要@Repository</strong>)
+<a href="https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html">JpaRepository文件</a></p>
+<p>額外的特色：</p>
+<ul>
+<li>可以用JPQL繼承或新增自定的Query</li>
+<li>有自己的Query語言 - Query Domain Specific Language(Query DSL)</li>
+<li>可定義自己的方法 (底層實作)</li>
+</ul>
+<p><a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.details">Defining Query Methods</a></p>
+<p><strong>使用JpaRepository之後，在Service裡面不需要加註 @Transactional，因為JpaRepository自帶交易功能。</strong></p>
+<h3 id="spring-data-rest">Spring Data REST</h3>
+<p><img src="https://i.imgur.com/B4ruUbK.jpg" alt="">
+Spring Data REST 會自動掃描專案中的JpaRepository，並產生REST API給每個Enitiy type。
+只需要在Spring Data JPA的基礎上，多新增一個 spring-boot-starter-data-rest 的 dependency。
+如此不再需要Controller和Service。
+對於Value Object的類別，其REST終端會將類別名稱字首小寫、後缀s來命名，比如 Employee類別，其對應的REST終端為 /employees。</p>
+<h4 id="客製rest終端">客製REST終端</h4>
+<p>但是如果有客製需求，可以在繼承JpaRepository的介面加入 @RepositoryRestResource 來設定，可帶入 path 屬性，其屬性合法值為字串，可以自行帶入想客製的REST終端名稱。
+<img src="https://i.imgur.com/PN0Jlkr.png" alt=""></p>
+<h5 id="pagination">Pagination</h5>
+<p>預設一頁顯示20個元素。
+可以透過查詢字串加入頁數參數來快速搜尋(0 based)。
+<img src="https://i.imgur.com/G8GzyvW.png" alt="">
+其餘設定可以透過 <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#common-application-properties">Spring Boot Application Common Properties</a>查看，spring.data.rest.*</p>
+<h2 id="thymeleaf">Thymeleaf</h2>
+<p>一個獨立的框架，是一個 Java Template Engine，主要用來製作HTML並可以在其中使用 Thymeleaf 表達式。
+相似於JSP，但 Thymeleaf 可用於非WEB環境。(EMAIL、CSV、PDF)
+優點</p>
+<ul>
+<li>可以用迴圈和情況判斷式</li>
+<li>CSS和JS整合</li>
+</ul>
+
+        </div>
+
+        
+        <script src="https://utteranc.es/client.js"
+        repo="akechetaki10736/akechetaki10736.github.io"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<script>
+  var indexURL = "https://akechetaki10736.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://akechetaki10736.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://akechetaki10736.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://akechetaki10736.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://akechetaki10736.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://akechetaki10736.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://akechetaki10736.github.io/plugins/search/mark.js"></script>
+
+<script src="https://akechetaki10736.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://akechetaki10736.github.io/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'Your ID', 'auto');
+  ga('send', 'pageview');
+</script></body>
+</html>

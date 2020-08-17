@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring on kit&#39;s blog</title>
+    <link>https://akechetaki10736.github.io/categories/spring/</link>
+    <description>Recent content in Spring on kit&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sat, 15 Aug 2020 22:46:47 +0800</lastBuildDate>
+    
+	<atom:link href="https://akechetaki10736.github.io/categories/spring/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spring Framework學習筆記</title>
+      <link>https://akechetaki10736.github.io/blog/spring/</link>
+      <pubDate>Sat, 15 Aug 2020 22:46:47 +0800</pubDate>
+      
+      <guid>https://akechetaki10736.github.io/blog/spring/</guid>
+      <description>Spring Data Access Layer： JDBC &amp;gt; ORM &amp;gt; Transactions &amp;gt; OXM &amp;amp; JMS Web Layer： Servelt &amp;gt; WebSocket &amp;gt; Web &amp;gt; Portlet Infrascture： AOP &amp;gt; Aspects &amp;gt; Instructmentation &amp;gt; Messaging Test Layer： Unit &amp;gt; Integration &amp;gt; Mock</description>
+    </item>
+    
+  </channel>
+</rss>
