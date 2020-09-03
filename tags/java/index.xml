@@ -26,8 +26,8 @@
       <pubDate>Wed, 12 Aug 2020 22:50:47 +0800</pubDate>
       
       <guid>https://akechetaki10736.github.io/blog/hibernate/</guid>
-      <description>Hibernate  123  本質上是透過Java物件來操作SQL Table，因此在Java程式裡會有一個Entity類別(Pojo、Value Object)來對應一個SQL Table。
-Hibernate Annotation 透過在Entity類別裡加入Hibernate註解來告訴Hibernate該屬性對應的SQL Column。 Entity類別必須是public。 Entity類別裡一定要有預設建構子或無引數 (Argument)建構子。</description>
+      <description>Hibernate 本質上是透過Java物件來操作SQL Table，因此在Java程式裡會有一個Entity類別(Pojo、Value Object)來對應一個SQL Table。
+Hibernate Annotation 透過在Entity類別裡加入Hibernate註解來告訴Hibernate該屬性對應的SQL Column。 Entity類別必須是public。 Entity類別裡一定要有預設建構子或無引數 (Argument)建構子。 參數(Parameter)、引數(Argument)的差別 不可以是final類別，不可以有final方法。 資料成員不可以是public。 沒有finalize方法。</description>
     </item>
     
   </channel>

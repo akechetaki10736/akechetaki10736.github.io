@@ -125,16 +125,13 @@
         
         <div class="content mb-5">
           <h1 id="hibernate">Hibernate</h1>
-<ul>
-<li>123</li>
-</ul>
 <p>本質上是透過Java物件來操作SQL Table，因此在Java程式裡會有一個Entity類別(Pojo、Value Object)來對應一個SQL Table。</p>
 <h2 id="hibernate-annotation">Hibernate Annotation</h2>
 <p>透過在Entity類別裡加入Hibernate註解來告訴Hibernate該屬性對應的SQL Column。
 <strong>Entity類別必須是public。</strong>
-<strong>Entity類別裡一定要有預設建構子或無引數 (Argument)建構子。</strong></p>
-<!-- raw HTML omitted -->
-<p><strong>不可以是final類別，不可以有final方法。</strong>
+<strong>Entity類別裡一定要有預設建構子或無引數 (Argument)建構子。</strong> 
+<a href="https://notfalse.net/6/arg-vs-param">參數(Parameter)、引數(Argument)的差別</a>
+<strong>不可以是final類別，不可以有final方法。</strong>
 <strong>資料成員不可以是public。</strong>
 <strong>沒有finalize方法。</strong></p>
 <p><strong>在使用Hibernate時，應該import JPA套件，這是Hibernate Team的建議。</strong>
@@ -175,16 +172,16 @@
 <p>Session：用來包裹JDBC對於資料庫的連線，主要是用來儲存、載入物件的物件，生命週期短，從SessionFactory回收。</p>
 <h2 id="advanced-mapping">Advanced Mapping</h2>
 <h3 id="entity-lifecycle">Entity Lifecycle</h3>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p><img src="https://i.imgur.com/343Whv5.jpg" alt="">
+<img src="https://i.imgur.com/iXLnmia.jpg" alt=""></p>
 <h3 id="one-to-one">One to One</h3>
 <p>舉例：講師 &mdash;&gt; 講師詳細資料
 @OneToOne：可帶入cascade屬性，告訴Hibernate如何Cascade。
 @JoinColumn：帶入name屬性，合法值為另一方類別在sql中的fk或pk欄位名稱。如果要實現雙向O2O，在另外一個class也要加上相對應的field、O2O和JoinColumn註解。
-<strong>要新增被關聯表格的field，並將註解加在上方。</strong></p>
-<!-- raw HTML omitted -->
-<p>CascadeType</p>
-<!-- raw HTML omitted -->
+<strong>要新增被關聯表格的field，並將註解加在上方。</strong>
+<img src="https://i.imgur.com/eFauPVb.jpg" alt=""></p>
+<p>CascadeType
+<img src="https://i.imgur.com/ndK23Jg.jpg" alt=""></p>
 <h3 id="one-to-many">One to Many</h3>
 <p>舉例： 講師 &mdash;&gt; 課程
 在O2M中，要在多方裡新增一方的field，並加註@ManyToOne、@JoinColumn。
@@ -199,10 +196,12 @@
 <h4 id="eager-loading">Eager Loading</h4>
 <p>直接載入所有dependent Entites</p>
 <h4 id="default-fetchtype">Default FetchType</h4>
-<!-- raw HTML omitted -->
+<p><img src="https://i.imgur.com/fQgH3QI.png" alt=""></p>
 <h4 id="解決lazyloading的問題">解決LazyLoading的問題</h4>
-<p>在session關閉前讀取資料</p>
-<p>使用 HQL語法的 JOIN FETCH</p>
+<ul>
+<li><strong>在session關閉前讀取資料</strong></li>
+<li><strong>使用 HQL語法的 JOIN FETCH</strong></li>
+</ul>
 
         </div>
 
